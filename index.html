@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Once — confetti that only fires when it matters</title>
+<meta name="description" content="A celebration that happens exactly once per achievement, enforced in storage. Rarity is the whole mechanism.">
+<meta name="theme-color" content="#08090b">
+<link rel="canonical" href="https://vishnuvsdevtech.github.io/confetti-once/">
+<link rel="stylesheet" href="assets/base.css">
+<style>
+:root{--acc:#ffe066}
+.stage{border-color:rgba(255,224,102,.18);min-height:300px}
+.row{display:flex;gap:10px;align-items:center;margin-top:12px;flex-wrap:wrap}
+.status{font:11px var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+</style></head>
+<body><div class="wrap">
+<header><h1>Celebrate <em>once</em></h1><span class="tag">rarity · enforced</span></header>
+<div class="stage"><canvas id="c" width="1000" height="380"></canvas></div>
+<div class="row">
+  <button id="claim" class="on">Complete the thing</button>
+  <button id="reset">Reset demo</button>
+  <span class="status" id="status">unclaimed</span>
+</div>
+<div class="meter"><span>particles <b id="m-p">0</b></span><span>claims <b id="m-c">0</b></span>
+  <span>stored <b id="m-s">no</b></span></div>
+<div class="notes"><p>Confetti fired on every click is wallpaper. Fired once, on something that was actually finished, it is a small event — and the difference is not the animation, it is the scarcity.</p>
+<p>The claim is written to <code>localStorage</code>, so a reload knows. Pressing the button again gets an explanation instead of a celebration, which is the honest response: you already did this.</p></div>
+<footer><span>Once · POC</span><span>physics + a flag</span></footer>
+</div>
+<script src="assets/app.js"></script></body></html>
